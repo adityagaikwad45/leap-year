@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>Leap Year</header>
+        <form action="">
+            <input type="number">
+          <button type="submit">Check</button>
+        </form>
+        <div class="result">Enter a Year</div>
+        
+    </div>
+
+
+
+    <script>
+        const input = document.querySelector("input");
+        const checkBtn = document.querySelector("button");
+        const result = document.querySelector(".result");
+
+        checkBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const year = input.value;
+
+            if (year % 4 === 0) {
+                if (year % 100 === 0) {
+                    if (year % 400 === 0) {
+                        result.innerText = year + "is a Leap Year";
+                        result.innerText = year + " Today only comes once in four years. So make today, Feb 29 be extra special.Take that extra LEAP. Happy Leap Year, everyone"
+
+
+                    } else {
+                        result.innerText = year + "Sorry! wrong no, Its not a Leap Year";
+                        
+                    }
+                } else {
+                    result.innerText = year + "is a Leap Year";
+                    result.innerText = year + " Today only comes once in four years. So make today, Feb 29 be extra special. Take that extra LEAP. Happy Leap Year, everyone"
+
+
+                }
+            } else {
+                result.innerText = year + "Sorry! wrong no, Its not a Leap Year";
+                
+            }
+        })
+    </script>
+
+</body>
+
+</html>
